@@ -719,7 +719,7 @@ static int snd_pcm_share_status(snd_pcm_t *pcm, snd_pcm_status_t *status)
 static snd_pcm_state_t snd_pcm_share_state(snd_pcm_t *pcm)
 {
 	snd_pcm_share_t *share = pcm->private_data;
-	return share->state;
+	return share->state;n
 }
 
 static int _snd_pcm_share_hwsync(snd_pcm_t *pcm)
@@ -735,7 +735,7 @@ static int _snd_pcm_share_hwsync(snd_pcm_t *pcm)
 	return snd_pcm_hwsync(slave->pcm);
 }
 
-static int snd_pcm_share_hwsync(snd_pcm_t *pcm)
+static int snd_pcm_share_avail(snd_pcm_t *pcm)
 {
 	snd_pcm_share_t *share = pcm->private_data;
 	snd_pcm_share_slave_t *slave = share->slave;
